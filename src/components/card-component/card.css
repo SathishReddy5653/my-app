@@ -68,3 +68,28 @@
 .heading-box:hover{
     overflow:visible;
 }
+
+.buttons{
+    
+   padding: 1px;
+   
+}
+.cart-btn{
+    margin-bottom: 20px;
+    width:150px;
+}
+.save-btn{
+    margin-bottom: 20px;
+    width:155px;
+}
+.share-btn{
+    margin-bottom: 20px;
+    width:120px;
+}
+.view-btn{
+    margin-bottom: 20px;
+    width:150px;
+}
+.my-buttons{
+    margin-top: 160px;
+}

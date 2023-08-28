@@ -53,12 +53,20 @@ const Card = () => {
             <p>Registered</p>
             </div>
         </div>
+        <div>
+            <h3> 0% </h3>
+           
+        </div>
 
     </div>
 
     <div>
         <div className="node-heading">
           <h1>Employee Sales Meta Data Information</h1>
+        </div>
+        <div className=" my-buttons d-flex flex-row">
+        <button className="alation">Alation</button>
+            <p className="createdby">Curated by Sathish</p>
         </div>
 
     </div>
