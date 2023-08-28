@@ -35,7 +35,7 @@ const Card = () => {
 
         <div className="d-flex flex-column">
             <div>
-            <img src={certified} alt="certified-logo" width="40px"height="40px"/>
+            <img src={certified} alt="certified-logo" width="30px"height="30px"/>
             </div>
             <div>
              <p>Certified</p>
@@ -47,7 +47,7 @@ const Card = () => {
         <div className="d-flex flex-column"> 
              {/* <div className="registered details d-flex flex-row"> */}
             <div>
-            <img src={registered} alt="registered-logo" width="40px"height="40px"/>"
+            <img src={registered} alt="registered-logo" width="30px"height="30px"/>"
             </div>
             <div>
             <p>Registered</p>
@@ -73,10 +73,10 @@ const Card = () => {
 </div>  {/*flex-row completed */}
 
 <div className="addtocart-button d-flex flex-column" >
-            <button>Add to Cart   <img src={cart} alt="pinned" width="40px" height="40px"/></button>
-            <button>Add to Saved   <img src={pinned} alt="pinned" width="40px" height="40px"/>   </button>
-            <button>Share   <img src={share} alt="Share" width="40px" height="40px"/>   </button>
-            <button>View Node  <img src={viewnode} alt="Share"width="40px" height="40px"/>   </button> 
+            <button className="cart">Add to Cart   <img src={cart} alt="pinned" width="40px" height="40px"/></button>
+            <button className="save">Add to Saved   <img src={pinned} alt="pinned" width="40px" height="40px"/>   </button>
+            <button className="share">Share   <img src={share} alt="Share" width="40px" height="40px"/>   </button>
+            <button className="view">View Node  <img src={viewnode} alt="Share"width="40px" height="40px"/>   </button> 
 </div>
 
 </div>
