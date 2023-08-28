@@ -1,0 +1,16 @@
+/* Button.scss */
+@import "~bootstrap/scss/bootstrap"; // Import Bootstrap's SCSS
+.custom-tab{
+  @extend .custom-tab; // Extend Bootstrap's button styles
+  
+
+  background-color:inherit;
+  color: white;
+  }
+
+.tab-content{
+  @extend .tab-content;
+  
+}
+
+
