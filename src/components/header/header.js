@@ -56,6 +56,7 @@ const TopSection = () => {
         </Nav.Item>
         <Nav.Item className="nav-item">
           <img src={cart} alt="cart" height="45px" width="45px" />
+          <span className="cart-count">0</span>
         </Nav.Item>
         <Nav.Item className="nav-item">
           <img src={whislist} alt="cart" height="45px" width="45px" />
