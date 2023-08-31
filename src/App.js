@@ -1,17 +1,17 @@
-
-import './App.css';
-import TabButton from './components/tabs/tabs';
+import "./App.css";
 // import Welcome from './components/Welcome';
 // import Form from './components/Form';
-import TopSection from './components/header/header';
-function App(){
+import TopSection from "./components/header/header";
 
+import TabButton from "./components/tabs/tabs";
+import { CartProvider } from "./components/global-component/global";
+function App() {
   return (
     <div className="App">
-    
-    <TopSection/>
-    <TabButton/>
-  
+      <CartProvider>
+        <TopSection />
+        <TabButton />
+      </CartProvider>
     </div>
   );
 }

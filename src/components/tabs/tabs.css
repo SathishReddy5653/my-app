@@ -1,25 +1,24 @@
-.custom-tab{
-    
-  
-    background-color:inherit;
-    color: white;
-    width: 450px;
+.custom-tab {
 
-   
-    }
-  
-  /* .tab-content{
+
+  background-color: inherit;
+  color: white;
+  width: 450px;
+
+
+}
+
+/* .tab-content{
     
   } */
-  .nav-link {
-    padding: 10px;
-    font-size: 14px;   
-    width:350px;
-    text-align: center;
+.nav-link {
+  padding: 10px;
+  font-size: 14px;
+  width: 350px;
+  text-align: center;
 
 
 
 
-   
-  }
-  
+
+}

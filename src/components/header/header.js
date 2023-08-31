@@ -9,8 +9,10 @@ import notification from "../../images/bell.png";
 import { NavDropdown } from "react-bootstrap";
 import whislist from "../../images/love.png";
 import profile from "../../images/profile.png";
+import { useCart } from "../global-component/global";
 
 const TopSection = () => {
+  const { cartCount } = useCart();
   return (
     <Nav variant="pills" defaultActiveKey="/home" className=" bg-container">
       <div className="d-flex flex-row justify-content-start nav-container">
@@ -56,7 +58,7 @@ const TopSection = () => {
         </Nav.Item>
         <Nav.Item className="nav-item">
           <img src={cart} alt="cart" height="45px" width="45px" />
-          <span className="cart-count">0</span>
+          <span className="cart-count">{cartCount}</span>
         </Nav.Item>
         <Nav.Item className="nav-item">
           <img src={whislist} alt="cart" height="45px" width="45px" />
