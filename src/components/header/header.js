@@ -4,24 +4,30 @@ import logo from "../../images/datasouk.jpeg";
 import { Nav } from "react-bootstrap";
 import cart from "../../images/shopping-cart.png";
 import notification from "../../images/bell.png";
-// import Dropdown from 'react-bootstrap/Dropdown';
-// import DropdownButton from 'react-bootstrap/DropdownButton';
 import { NavDropdown } from "react-bootstrap";
 import whislist from "../../images/love.png";
 import profile from "../../images/profile.png";
 import { useCart } from "../global-component/global";
 
+import { Link } from "react-router-dom";
+
+
 const TopSection = () => {
-  const { cartCount } = useCart();
+  const { cartCount ,searchInput,handleInputChange} = useCart();
+  
   return (
     <Nav variant="pills" defaultActiveKey="/home" className=" bg-container">
       <div className="d-flex flex-row justify-content-start nav-container">
         <Nav.Item className="nav-item">
           <img src={logo} alt="logo" className="logo" />
         </Nav.Item>
+       
         <Nav.Item className="nav-item">
+        <Link to="/home">
           <button className="home">Home</button>
+         </Link>
         </Nav.Item>
+        
 
         <Nav.Item>
           <NavDropdown
@@ -43,18 +49,20 @@ const TopSection = () => {
               Separated link
             </NavDropdown.Item>
           </NavDropdown>
-          {/* <DropdownButton id="dropdown-basic-button" title="My Work" >
-      <Dropdown.Item href="#/action-1"> My Nodes</Dropdown.Item>
-      <Dropdown.Item href="#/action-2">My collection</Dropdown.Item>
-      <Dropdown.Item href="#/action-3">My Orders</Dropdown.Item>
-    </DropdownButton> */}
         </Nav.Item>
         <Nav.Item className="nav-item">
+         
+
+        <Link to="/search">
           <input
             type="search"
             className="search-bar"
             placeholder="Search Something..."
-          ></input>
+            value={searchInput}
+            onChange={handleInputChange}
+             />
+</Link>
+    
         </Nav.Item>
         <Nav.Item className="nav-item">
           <img src={cart} alt="cart" height="45px" width="45px" />
@@ -72,6 +80,10 @@ const TopSection = () => {
         </Nav.Item>
       </div>
     </Nav>
+    
+      
+
   );
+
 };
 export default TopSection;
