@@ -26,7 +26,7 @@ const Welcome = () => {
   }
   function deleteTask(id){
     let updatedTask=taskDetails.filter((todo)=>{
-      return todo.id===id
+      return todo.id!==id
     })
     updateTaskDetails(updatedTask)
 
