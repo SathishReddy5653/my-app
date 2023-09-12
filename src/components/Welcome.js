@@ -1,32 +1,40 @@
 import React from "react";
 // import Home from "./Home";
 import { useState } from "react";
-
+import '../../src/components/welcome.css'
 const Welcome = () => {
   // let [name, setName] = useState("Sathish");
   // const editName = () => {
   //   setName("Sai");
   // };
+  
   let [taskInput, updateTaskInput] = useState("");
   let [taskDetails, updateTaskDetails] = useState([
-    { id: 1, task: "Laren React" },
+    { id: 1, task: "Learn React" },
     { id: 2, task: "Practice React" },
     { id: 3, task: "Do Workout" },
     { id: 4, task: "Do Meditation" },
   ]);
-  let nextId = 4;
+  let [nextId,updateId] = useState(4)
+  
+ 
   function addNewTask() {
+    updateId(nextId+1)
+    console.log(nextId)
     if (taskInput === "") {
       alert("Add some tasks");
     } else {
-      let newTask = [...taskDetails, { id: nextId++, task: taskInput }];
+      let newTask = [...taskDetails, { id:nextId, task:taskInput }];
       updateTaskDetails(newTask);
+      
       updateTaskInput("")
+     
     }
   }
   function deleteTask(id){
+    
     let updatedTask=taskDetails.filter((todo)=>{
-      return todo.id!==id
+      return todo.id!==id;
     })
     updateTaskDetails(updatedTask)
 
@@ -49,6 +57,7 @@ const Welcome = () => {
               let task = e.target.value;
               updateTaskInput(task);
               
+              
             }}
           ></input>
           <button className="btn btn-primary" onClick={() => addNewTask()}>
@@ -63,16 +72,16 @@ const Welcome = () => {
                 <button className="btn" onClick={()=>{deleteTask(todo.id)}}>Delete</button>
               </li>
             );
+           
           })}
 
-          {/* <li className="list-group-item d-flex flex-row justify-content-between align-content-center">
-<p>Task 1</p><button className="btn">Delete</button>
-        </li>
-
-        <li className="list-group-item d-flex flex-row justify-content-between align-content-center">
-<p>Task 2 </p><button className="btn">Delete</button>
-        </li> */}
         </ul>
+        {taskDetails.length >0 ? (
+        <button className="btn btn-primary mt-5 saveButton">Save</button>
+      ) : (
+        <p>No data available to save</p>
+      )}
+             
       </div>
     </div>
   );
