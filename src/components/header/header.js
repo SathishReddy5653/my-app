@@ -65,8 +65,10 @@ const TopSection = () => {
     
         </Nav.Item>
         <Nav.Item className="nav-item">
+        <Link to="/cart">
           <img src={cart} alt="cart" height="45px" width="45px" />
           <span className="cart-count">{cartCount}</span>
+          </Link>
         </Nav.Item>
         <Nav.Item className="nav-item">
           <img src={whislist} alt="cart" height="45px" width="45px" />

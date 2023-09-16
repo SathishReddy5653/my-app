@@ -7,6 +7,7 @@ import TabButton from "./components/tabs/tabs";
 import { CartProvider } from "./components/global-component/global";
 // import { Home } from "@mui/icons-material";
 import Welcome from "./components/Welcome";
+import DisplayCartItems from "./components/cart";
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
         <Routes>
         <Route path="/home" element={<Welcome/>}/>
         <Route path="/tabs" element={<TabButton/>}/>
-        
+        <Route path="/cart" element={<DisplayCartItems/>}/>
         </Routes>
     
         

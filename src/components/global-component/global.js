@@ -7,7 +7,7 @@ import registered from "../../images/registered.jpeg";
 
 let cardDetails = [
   {
-    id: 1,
+    id: 101,
     image: dataset,
     buttonName: "DataSet",
     certified_logo: certified,
@@ -20,7 +20,7 @@ let cardDetails = [
     name: "Sathish",
   },
   {
-    id: 2,
+    id: 102,
     image: dataset,
     buttonName: "MyDataSet",
     certified_logo: certified,
@@ -33,7 +33,7 @@ let cardDetails = [
     name: "Jeevitha",
   },
   {
-    id: 3,
+    id: 103,
     image: dataset,
     buttonName: "DataSet",
     certified_logo: certified,
@@ -46,7 +46,7 @@ let cardDetails = [
     name: "Sai Kiran Reddy",
   },
   {
-    id: 4,
+    id: 104,
     image: dataset,
     buttonName: "DataSet",
     certified_logo: certified,
@@ -66,15 +66,20 @@ export const CartContext = React.createContext();
 
 export const CartProvider = ({ children }) => {
   const [cartCount, setCartCount] = useState(0);
-
-
-
-  const addToCart = () => {
-    setCartCount(cartCount + 1);
-  };
-
+  
+let [cartItems,setCartItems]=useState([]);
+  
+  const addToCart = (p) => {
+    
+   
+  setCartItems([...cartItems,p]);
+  setCartCount(cartCount + 1);
+  
+}
+console.log(cartItems);
+  
   return (
-    <CartContext.Provider value={{cardDetails,addToCart, cartCount }}>
+    <CartContext.Provider value={{cardDetails,addToCart, cartCount,cartItems }}>
       {children}
     </CartContext.Provider>
   );

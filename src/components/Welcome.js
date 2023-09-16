@@ -1,7 +1,8 @@
 import React from "react";
 // import Home from "./Home";
 import { useState } from "react";
-import '../../src/components/welcome.css'
+import '../../src/components/welcome.css';
+// import { useEffect } from "react";
 const Welcome = () => {
   // let [name, setName] = useState("Sathish");
   // const editName = () => {
@@ -17,7 +18,9 @@ const Welcome = () => {
   ]);
   let [nextId,updateId] = useState(4)
   
- 
+  // const [data, setData] = useState('');
+  // const [dataArray, setDataArray] = useState([]);
+
   function addNewTask() {
     updateId(nextId+1)
     console.log(nextId)
@@ -39,6 +42,30 @@ const Welcome = () => {
     updateTaskDetails(updatedTask)
 
   }
+  // Load saved data from local storage when the component mounts
+  // useEffect(() => {
+  //   const savedData = localStorage.getItem('savedData');
+  //   if (savedData) {
+  //     setData(savedData);
+  //   }
+
+    // Load saved data array from local storage
+  //   const savedDataArray = localStorage.getItem('savedDataArray');
+  //   if (savedDataArray) {
+  //     setDataArray(JSON.parse(savedDataArray));
+  //   }
+  // }, []);
+  // const saveData = () => {
+    // Save data to the array
+    // setDataArray([...taskDetails, data]);
+
+    // Save the updated array to local storage
+    // localStorage.setItem('savedDataArray', JSON.stringify([...taskDetails, data]));
+
+    // Clear the input field
+  
+  // };
+
   return (
     <div>
       <h1>Welcome to Home Section </h1>
@@ -77,7 +104,7 @@ const Welcome = () => {
 
         </ul>
         {taskDetails.length >0 ? (
-        <button className="btn btn-primary mt-5 saveButton">Save</button>
+        <button className="btn btn-primary mt-5 saveButton" >Save</button>
       ) : (
         <p>No data available to save</p>
       )}

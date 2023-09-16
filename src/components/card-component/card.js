@@ -98,9 +98,9 @@ import { useCart } from "../global-component/global";
 const Cards = (p) => {
   // const [isAdded, setIsAdded] = useState(false);
   const { addToCart } = useCart();
-  const handleAddToCart = () => {
-    addToCart();
-  };
+  // const handleAddToCart = () => {
+  //   addToCart();
+  // };
 
   return (
     <div className="card ">
@@ -165,7 +165,7 @@ const Cards = (p) => {
           </div>
           {/*flex-row completed */}
           <div className="addtocart-button d-flex flex-column">
-            <button className="cart" onClick={handleAddToCart}>
+            <button className="cart" onClick={()=>{addToCart(p)}}>
               Add to Cart
               <img src={cart} alt="pinned" width="40px" height="40px" />
             </button>
